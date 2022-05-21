@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'native/raster'
 class Raster
   attr_reader :output_size
 

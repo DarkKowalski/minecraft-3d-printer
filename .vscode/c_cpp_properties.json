@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "x86_64-linux-rvm-c-api",
+            "includePath": [
+                "${MY_RUBY_HOME}/include/ruby-3.1.0",
+                "${MY_RUBY_HOME}/include/ruby-3.1.0/ruby",
+                "${MY_RUBY_HOME}/include/ruby-3.1.0/x86_64-linux"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c99",
+            "cppStandard": "c++14",
+        }
+    ],
+    "version": 4
+}

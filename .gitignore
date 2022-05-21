@@ -91,3 +91,4 @@ build-iPhoneSimulator/
 *.mcfuncion
 *.mcfuncion.md5
 /stl/
+!/.vscode/c_cpp_properties.json

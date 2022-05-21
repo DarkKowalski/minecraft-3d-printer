@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'matrix'
+require_relative 'native/triangle'
 
 class Triangle
   attr_reader :points
@@ -31,6 +32,7 @@ class Triangle
   end
 
   def contains?(point)
+    test_ # FIXME: remove this
     is_same_side?(points[0], points[1], points[2], point) &&
       is_same_side?(points[1], points[2], points[0], point) &&
       is_same_side?(points[2], points[0], points[1], point)

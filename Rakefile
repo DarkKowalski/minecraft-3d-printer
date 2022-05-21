@@ -4,9 +4,12 @@ require 'rubocop/rake_task'
 require 'rake/extensiontask'
 require 'rake/testtask'
 
-Rake::ExtensionTask.new('minecraft_3d_printer') do |ext|
-  ext.ext_dir = 'ext'
-  ext.lib_dir = 'src'
+native_extensions = %w[triangle raster]
+native_extensions.each do |ext|
+  Rake::ExtensionTask.new(ext) do |e|
+    e.ext_dir = "ext/#{ext}"
+    e.lib_dir = 'src/native'
+  end
 end
 
 Rake::TestTask.new(:test) do |t|
