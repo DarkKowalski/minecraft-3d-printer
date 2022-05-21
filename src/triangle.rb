@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require 'matrix'
 
 class Triangle
   attr_reader :points
+
   def initialize(a, b, c)
     @points = [a, b, c]
   end
@@ -24,11 +27,11 @@ class Triangle
     ap = point - a
     v1 = ab.cross(ac)
     v2 = ap.cross(ac)
-    return v1.dot(v2) >= 0
+    v1.dot(v2) >= 0
   end
 
   def contains?(point)
-    return is_same_side?(points[0], points[1], points[2], point) &&
+    is_same_side?(points[0], points[1], points[2], point) &&
       is_same_side?(points[1], points[2], points[0], point) &&
       is_same_side?(points[2], points[0], points[1], point)
   end
